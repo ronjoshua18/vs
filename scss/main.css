@@ -825,7 +825,7 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   font-size: 1rem;
 }
 .os__wrapper .os__item table:last-child {
-  height: 7rem;
+  height: 14rem;
 }
 .os__wrapper .os__item table {
   height: 11rem;
