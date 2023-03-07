@@ -1,0 +1,198 @@
+.header{
+    background-color: $clr-gray;
+    // position: relative;
+    width: 100%;
+    z-index: 999;
+    &__wrapper{
+        @include centerbetween;
+    }
+
+    .branding{
+        display: flex;
+        align-items: center;
+        img{
+            width: 4rem;
+        }
+        h3{
+            color: $clr-light;
+            margin-left: 1rem;
+            font-size: 2rem;
+            
+        }
+
+        
+    }
+
+    &__nav1{
+        display: none;
+    }
+    &__nav2{
+        z-index: 1;
+        transition: .5s ease;
+        height: 39rem;
+        overflow: scroll;
+        overflow-x: hidden;
+
+        
+        left: 0;
+        position: absolute;
+        top: -100rem;
+        background-color: $clr-dark;
+        // padding: 0rem;
+        width: 100%;
+
+        &.open{
+            top: 7rem;
+        }
+        
+         ul{
+            li{
+                padding: 1rem;
+                a{
+                    color: $clr-light;
+                    font-size: 2rem;
+                    
+                    
+                }
+            }
+         }
+
+         .side2{
+            display: flex;
+            flex-direction: column;
+            
+           input{
+            background-color: $clr-dark;
+            padding: 1rem;
+            border: none;
+            font-size: 1.9rem;
+            color: $clr-light;
+            outline: none;
+           }
+
+            a{
+                color: $clr-light;
+                background-color: $clr-blue;
+                font-size: 2rem;
+                padding: 1rem;
+                
+            } 
+         }
+
+         
+    }
+
+    .toggle__menu{
+        display: block;
+        span{
+        width: 3.5rem;
+        height: .4rem;
+        right: 0;
+        background-color: $clr-light;
+        display: block;
+        margin-bottom: .5rem;
+        border-radius: 5rem;
+        transition: .5s ease;
+        z-index: 999;
+        }
+        
+
+        
+       }
+       .toggle__menu:hover{
+        background-color: #0396ff;
+        color: $clr-primary;
+        padding: .1rem;
+    }
+
+       .toggle__menu.open {   
+        span{
+            &:first-child{
+               
+                transition: .5s ease;
+            }
+            &:nth-child(2){
+                // opacity: 0;
+                transition: .5s ease;
+            }
+    
+           &:last-child{
+           
+            transition: .5s ease;
+        }
+        }
+           
+        
+       
+
+       }
+
+
+   
+}
+
+@include mediaQuery($break-lg){
+    .header{
+        
+        // height: 6.5rem;
+        &__nav1{
+            margin-right: 5rem; 
+            @include centerbetween;
+            ul{
+                margin-right: 10rem;
+                display: flex;
+                li{
+                    padding: 1rem 2rem;
+
+                    a{
+                        color: #a5a5a7;
+                        font-size: 1.8rem;
+                        &:hover{
+                            color: $clr-light;
+                        }
+                    }
+                }
+            }
+        }
+        .side{
+            display: flex;
+            
+            .i{
+            position: absolute;
+            color: $clr-light;
+            top: 10rem;
+            
+            
+
+           }
+           input{
+            position: relative;
+            padding: 1.5rem;
+            background-color: $clr-gray;
+            border: none;
+            outline: none;
+            color: $clr-light;
+            &::placeholder{
+                color: $clr-light;
+            }
+           }
+           a{
+            color: $clr-light;
+            background-color: $clr-blue;
+            padding: 1.5rem;
+           }
+           
+        }
+
+        &__nav2{
+            display: none;
+
+            
+        }
+        .toggle__menu{
+            display: none;
+        }
+    }
+}
+
+
