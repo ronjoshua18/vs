@@ -441,8 +441,9 @@
             
             
             li{
-                font-size: 2.5rem;
-                margin-bottom: 4rem;
+                font-size: 1.8rem;
+                
+                margin-bottom: 2rem;
                 
             }
         }
@@ -452,7 +453,7 @@
             a{
                 
                 color: $clr-blue;
-                font-size: 2rem;
+                font-size: 1.5rem;
                 &:hover{
                     text-decoration: underline;
                 }
@@ -461,8 +462,8 @@
         }
          .btn{
             color: $clr-light;
-            padding: 3rem;
-            font-size: 3rem;
+            padding: 2rem;
+            font-size: 2rem;
             &:hover{
                background-color: darken($clr-blue, $amount: 10);
             }
@@ -500,6 +501,13 @@
 .os{
 
     &__wrapper{
+        @include mediaQuery($break-md){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 4rem;
+        }
         padding: 3rem 0;
         @include mediaQuery($break-lg){
             @include grid(3, 0);
@@ -561,6 +569,83 @@
         
     }
 }
+
+
+.features {
+    background-color: lighten($clr-LINE, 30);
+    padding: 3rem 7.5rem;
+    width: 100%;
+    &__wrapper{
+        text-align: center;
+    
+        .features__head{
+            @include mediaQuery($break-lg){
+                @include grid(2, 1rem);
+            }
+            .features__left{
+                margin: 3rem 0;
+                margin-bottom: 7rem;
+                h2{
+                    font-size: 2rem;
+                    margin-bottom: 1rem;
+                    font-weight: 500;
+                }
+                p{
+                    font-weight: 100;
+                }
+                a{
+                    color: $clr-blue;
+                    &:hover{
+                        text-decoration-line: underline;
+                    }
+                }
+            }
+            .features__right{
+                margin: 3rem 0;
+                margin-bottom: 7rem;
+                h2{
+                    font-size: 2rem;
+                    margin-bottom: 1rem;
+                    font-weight: 500;
+                    a{
+                        color: $clr-blue;
+                        &:hover{
+                            text-decoration-line: underline;
+                        }
+                    }
+                }
+                p{
+                    font-weight: 100;
+                }
+            }
+        }
+
+        .features__bottom{
+            @include mediaQuery($break-lg){
+                width: 60rem;
+                margin: 0 auto;
+            }
+            h2{
+                font-weight: 500;
+                color: lighten($clr-dark, 30);
+                margin-bottom: 2rem;
+            }
+            p{
+                line-height: 3;
+                font-size: 1.19rem;
+                color: lighten($clr-dark, 30);
+                a{
+                    color: $clr-blue;
+                    &:hover{
+                        text-decoration-line: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 
 
 
